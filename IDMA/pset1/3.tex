@@ -8,13 +8,32 @@ while (j<=n) {
 		A[j] := A[j]+i*i 
 	}
 	j := j+1
-}
+	}
 \end{minted}
 
 % Opg 3.a
-\subsection{}
-   
+\subsection{Explain what the algorithm does, and what are the number stored and computed in A}
 
+Let start with the easier part, what are the values stored in array A, from j to n. 
+The values stored in A are the sum og squares of j downto 1, meaning that for A[2], A[2 ] is equal to $2^2 + 1^2= 5$. 
+
+j is an index variable showing our position in the array. This algorithm has 2 loops, the outer while-loop runs n times,
+going through every element in the array. The inner for-loop, that also run n times,  is used to update the values of the array from j to n. Initially 
+A[j:n] = 0, a condition/ command specified at the begining of the outer-loop.  The inner for-loop takes A[j] and iterates throught it i times, until i hits 1.
+At each iteration in the for loop, the value of A[j] is updated, then the updated value is used for the next iteration, once i hits 1, the for-loop terminates, and 
+j is updated to j+1. 
+To reduce abstraction, suppose that n=3 and execute the algorithm at j=3 manually.
+  j=3
+ \begin{equation}
+ A[3] =0 \to j \le n (true, continue)	
+ \end{equation} 
+ we enter for-loop
+  \begin{equation}
+	A[3] = 0+3*3=9 \to A[3']= A[3] + 2*2= 13 \to A[3''] = A[3'] + 1*1  = 13+1= 14 
+  \end{equation}
+  \begin{equation}
+ i=1 \textsl{(for-oop terminates)} \to j=3+1 = 4 \to  4 \le 3 \textsl{(j larger than, outer-loop terminates)}
+  \end{equation}
 
 
 

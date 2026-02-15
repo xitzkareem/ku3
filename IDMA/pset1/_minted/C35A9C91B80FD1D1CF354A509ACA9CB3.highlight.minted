@@ -6,5 +6,5 @@
 		\PYG{n}{A}\PYG{p}{[}\PYG{n}{j}\PYG{p}{]} \PYG{o}{:=} \PYG{n}{A}\PYG{p}{[}\PYG{n}{j}\PYG{p}{]}\PYG{o}{+}\PYG{n}{i}\PYG{o}{*}\PYG{n}{i}
 	\PYG{p}{\PYGZcb{}}
 	\PYG{n}{j} \PYG{o}{:=} \PYG{n}{j}\PYG{o}{+}\PYG{l+m+mi}{1}
-\PYG{p}{\PYGZcb{}}
+	\PYG{p}{\PYGZcb{}}
 \end{MintedVerbatim}
