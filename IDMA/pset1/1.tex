@@ -1,0 +1,30 @@
+
+\section{Different representations of integers}
+
+
+\subsection{Write the binary number $(110)_2$ in decimal notation}
+Binary notation refers to the number system of base 2, where as the decimal notation refers to base 10. I will start by expanding $(110)_2 = 1*2^2+1*2^1+0*2^0=6$, now I will try to write the number 6 in decimal notation. To do that I will use the equation $$m=q_0 \cdot b +r_0...$$
+ $$...m=q_n \cdot b +r_n$$
+where : $m: \text{is the number we are trying to rewrite, } b:\text{the base}$, we continue running the recursion process until $q_n= 0$ 
+$$6=0\cdot 10+6 $$ since $q_0=0$ we stop and now we have $$(110)_2=(6)_{10}$$
+
+\subsection{Write the decimal number $110$ in binary notation}
+Following the steps of the previous question,  we have 
+$$(110)_{10}=1 \cdot 10^2+1 \cdot 10^1 + 0 \cdot 10^0=110$$
+to convert the number 110 to base 2 we use the equation : 
+$$110= 55 \cdot2+0$$
+$$55= 27\cdot 2+ 1$$
+$$27= 13\cdot 2 +1$$
+$$13=  6\cdot 2+1$$
+$$6=3*2+0$$
+$$3= 1\cdot 2+1$$
+$$1= 0 \cdot2 +1$$
+
+Then we have that 
+$$(110)_{10}= (1101110)_2$$
+\subsection{Write the octal number $(110)_8$ in decimal notation}
+$$(110)_{8}= 1 \cdot 8^2+1 \cdot 8^1 + 0 \cdot8^0 = 64+8+0=72$$
+$$72= 7 \cdot 10+2$$
+$$7= 0 \cdot 10+7$$
+hence $$(110)_8=(72)_{10}$$
+

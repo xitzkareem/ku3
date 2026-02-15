@@ -1,0 +1,59 @@
+\usepackage[USenglish]{babel}
+% \usepackage[danish]{babel}
+
+
+\usepackage{lastpage} % For page x of y
+
+\usepackage{a4wide}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{lipsum}
+\usepackage{amsmath,amssymb,amsthm,mathtools,centernot,bbm} % More math
+
+
+
+\usepackage{graphicx}  % For including images
+\usepackage{xcolor}  % For a colorfull presentation
+\usepackage{listings}  % For presenting code 
+\usepackage{wrapfig,lipsum,booktabs} % Wrap table
+\usepackage{colortbl} % For rowcolors
+\usepackage{cancel} % For cancelling out math
+\usepackage{forest} % For merge-sort tree
+
+\usepackage{hyperref}
+
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}} % to give subsectinos letters instead of numbers
+
+
+
+\usepackage{minted} % for at kunne skrive python kode, som pseudocode
+\newminted{pycon}{bgcolor=bg, linenos=true, tabsize=4} % for at skrive python output via pycon
+
+
+
+% Definering af farver
+\definecolor{ao}{rgb}{0.0, 0.5, 0.0}
+\definecolor{mycyan}{rgb}{0.0, 0.72, 0.92}
+
+% Jeg har givet \paragraph egenskaberne af en subsubsubsection
+\usepackage{titlesec}
+\setcounter{secnumdepth}{4}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+
+% Captions, wrapping figures, colors, and more
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{color,parskip,graphicx,multicol,wrapfig}
+
+% For at kunne splitte celle
+\usepackage{diagbox, hyperref}
+
+% For at beholde mathcal fonten
+\DeclareMathAlphabet{\mathcal}{OMS}{cmsy}{m}{n}
+
+
