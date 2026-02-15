@@ -15,7 +15,7 @@ while (j<=n) {
 \subsection{Explain what the algorithm does, and what are the number stored and computed in A}
 
 Let start with the easier part, what are the values stored in array A, from j to n. 
-The values stored in A are the sum og squares of j downto 1, meaning that for A[2], A[2 ] is equal to $2^2 + 1^2= 5$. 
+The values stored in A are the sum of squares of j downto 1, meaning that for A[2], A[2 ] is equal to $2^2 + 1^2= 5$. 
 
 j is an index variable showing our position in the array. This algorithm has 2 loops, the outer while-loop runs n times,
 going through every element in the array. The inner for-loop, that also run n times,  is used to update the values of the array from j to n. Initially 
@@ -38,20 +38,31 @@ To reduce abstraction, suppose that n=3 and execute the algorithm at j=3 manuall
 
 
 % Opg 3.b
-\subsection{}
+\subsection{Provide an asymptotic analysis  of the running time as function of the array size n} 
     
+We can analyse the running time of the algorithm by looking at the inner and outer loop. Assuming that every operation takes a constant time
+c, we can avoid detailed analysis and look at the recursive operations. The outer-loop will run n-times, and for each j in the while loop run, the for loop runs 
+j times. This means that if j = 3, the for loop runs 3 times, j=n, the for-loop with run n-times.The complexity of this such a relationship is n*n = n² .
+Asymptotic analysis refers to the behavior of the algorithm as n grows to infinity. 
 
-    
-
+\begin{equation}
+O(n^2 )
+\end{equation}
 
 
 
 
 
 % Opg 3.c
-\subsection{}
+\subsection{Improve the code to run faster while retaining the same functionality, analyse the time complexity }
+This algorithm should run faster considering that it only has one loop that runs n times, rather than  2-loops running n times each.
 
-
-
+\begin{minted}{python}
+A[1:n]
+for i = 2 up to n :
+	if i <= n :
+		A[i] = i*i +A[i-1]
+	i = i+1 	
+\end{minted}
 
 
