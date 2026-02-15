@@ -32,23 +32,31 @@ Lines 8 :
 After computing the sum of array A, line 8 divide the sum by j : len.(A) which is the average of the values in the array. 
 
 Line 9-13: 
-In this if-else statement, we compare the average of the elements in array A with the last element in array B, if s is larger than B[j] good becomes false and the code returns FALSE.
-if that is not the case,  the else statement is run, and the next comparison is between s and B[j-1 ], and so on until j = 0. 
+In this if-else statement, we compare the average of all the elements in array A with the last element in array B, if s is larger than B[j] good becomes false and the code returns FALSE.
+if that is not the case,  the else statement is run, j beomes n-1, and the while loop runs one more time computing a new average (the new average is the average of n-1 elements in A)
 
-If s is larger than all the elements in B, then the algorithm returns TRUE, if there is at least one element in B that is larger than s, the algorithm returuns false. 
+If s (for j=n) is larger than  B[j], then the algorithm returns TRUE. The function returns false if all s' (average) [for j=n to 1] are smaller than B[j:1]. 
+Remember that B[j-1] is compared with average.A[1:j-1] and B[j-2] against averae.A[1:j-2] and so on.  
 
 
 % Opg 4.b
 \subsection{Provide an asymptotic analysis  of the running time as function of the array size n}
 
-
-
+The worst case scenario can be charectrized by the situatuation where every element in B[1:n] is larger than every average computed for A[n:1] (I hope the notation here makes sense).
+In that scenario, the outter while-loop will run n times, the inner for-loop will run n times. The if-else statement is also run n times, but it is not really a computation
+, but just a comparison step which takes a constant time, hence it is ignored. Therefor we can say that the Big O for this algorithm is 
+\begin{equation}
+	O(n^2)
+\end{equation}
 
 
 % Opg 4.c
 \subsection{Improve the code to run faster while retatining the same functionality. Analyse it.}
+The straight forward way to improving an algorithm is by reducing the number of loops (recursive functions), and splitting the problem into smaller 
+sub-problems that takes constant time to solve. 
+
 We could split each array in half, compute the averages of the 4 sub-arrays then compare them. 
 
-
+......
 
 

@@ -1,19 +1,35 @@
 % Opg 2
 \section{Find the greates common divisor using the algorithm we learned, show the steps then 
 express d as linear combination of m and n}
-
+To solve this problem we will use the following equation, which was explained in problem 1
+\begin{equation}
+	m=q*n+r 
+\end{equation}
 % Opg 2.a
 \subsection{ m=38, n=14}
+\begin{equation}
+	38 = q_0 \cdot 14 +r \to q = 2 , r= 10
+\end{equation}
+\begin{equation}
+	14= q_1 \cdot 10 + r \to q_1 = 1 , r =4
+\end{equation}
+\begin{equation}
+	10 = q_3 \cdot 4 + r \to  q_3 = 2 , r = 2 
+\end{equation}
+\begin{equation}
+	4 = q_4 * 2 +r \to q_4 = 2 , r = 0 
+\end{equation}
 
-\begin{minted}{python}
-    
-
-    
-\end{minted}
-
+The gcd is the last remainder that is not 0. To write it in linear combination we have to solve for the following : 
+\begin{equation}
+	 2 = x  \cdot 14 + y \cdot 38 \dots
+\end{equation}
 % Opg 2.b
 \subsection{m=117, n=69}
-
+ 
+\begin{equation}
+	117 = q_0 * 69 +r
+\end{equation}
 
 
 
