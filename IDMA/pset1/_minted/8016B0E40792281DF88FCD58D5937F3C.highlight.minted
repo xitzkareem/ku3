@@ -1,0 +1,18 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{l+m+mi}{1} \PYG{n}{j} \PYG{o}{:=} \PYG{n}{n}
+\PYG{l+m+mi}{2} \PYG{n}{good} \PYG{o}{:=} \PYG{n}{TRUE}
+\PYG{l+m+mi}{3} \PYG{k}{while} \PYG{p}{(}\PYG{n}{j} \PYG{o}{\PYGZgt{}}\PYG{o}{=} \PYG{l+m+mi}{1} \PYG{o+ow}{and} \PYG{n}{good}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+\PYG{l+m+mi}{4}    \PYG{n}{s} \PYG{o}{:=} \PYG{n}{A}\PYG{p}{[}\PYG{n}{j}\PYG{p}{]}
+\PYG{l+m+mi}{5}    \PYG{k}{for} \PYG{n}{i} \PYG{o}{:=} \PYG{n}{j} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1} \PYG{n}{downto} \PYG{l+m+mi}{1} \PYG{p}{\PYGZob{}}
+\PYG{l+m+mi}{6}        \PYG{n}{s} \PYG{o}{:=} \PYG{n}{s} \PYG{o}{+} \PYG{n}{A}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}
+\PYG{l+m+mi}{7}    \PYG{p}{\PYGZcb{}}
+\PYG{l+m+mi}{8}    \PYG{n}{s} \PYG{o}{:=} \PYG{n}{s} \PYG{o}{/} \PYG{n}{j}
+\PYG{l+m+mi}{9}    \PYG{k}{if} \PYG{p}{(}\PYG{n}{s} \PYG{o}{\PYGZgt{}} \PYG{n}{B}\PYG{p}{[}\PYG{n}{j}\PYG{p}{]}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+\PYG{l+m+mi}{10}        \PYG{n}{good} \PYG{o}{:=} \PYG{n}{FALSE}
+\PYG{l+m+mi}{11}    \PYG{p}{\PYGZcb{}}
+\PYG{l+m+mi}{12}    \PYG{k}{else} \PYG{p}{\PYGZob{}}
+\PYG{l+m+mi}{13}        \PYG{n}{j} \PYG{o}{:=} \PYG{n}{j} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\PYG{l+m+mi}{14} \PYG{k}{return} \PYG{n}{good}
+\end{MintedVerbatim}

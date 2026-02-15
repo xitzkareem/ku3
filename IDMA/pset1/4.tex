@@ -1,22 +1,53 @@
 % Opg 4
 \section{}
+\begin{minted}{python3}
+1 j := n
+2 good := TRUE
+3 while (j >= 1 and good) {
+4    s := A[j]
+5    for i := j - 1 downto 1 {
+6        s := s + A[i]
+7    }
+8    s := s / j
+9    if (s > B[j]) {
+10        good := FALSE
+11    }
+12    else {
+13        j := j - 1
+    }
+}
+14 return good
+\end{minted}
 
 % Opg 4.a
-\subsection{}
+\subsection{Explain what the algorithm does, when does it return TRUE or FALSE and why }
+Let divide the code into smaller pieces then explain each part individually. First we pay attention that array B and A have the same length n. 
+
+Lines 1- 6 : the length of the arrays is assigned to the variable j, and the variable good is assigned a boolean value : TRUE. The outer while loop keeps running until $j<1 $ or good =false. 
+Variable s is used to save the sum of all the elements in array A. This happens using the inner for loop that iterates through each element in A and sum them, then updat the 
+value of s to include the sum before it. 	
 
 
+Lines 8 : 
+After computing the sum of array A, line 8 divide the sum by j : len.(A) which is the average of the values in the array. 
 
+Line 9-13: 
+In this if-else statement, we compare the average of the elements in array A with the last element in array B, if s is larger than B[j] good becomes false and the code returns FALSE.
+if that is not the case,  the else statement is run, and the next comparison is between s and B[j-1 ], and so on until j = 0. 
+
+If s is larger than all the elements in B, then the algorithm returns TRUE, if there is at least one element in B that is larger than s, the algorithm returuns false. 
 
 
 % Opg 4.b
-\subsection{}
+\subsection{Provide an asymptotic analysis  of the running time as function of the array size n}
 
 
 
 
 
 % Opg 4.c
-\subsection{}
+\subsection{Improve the code to run faster while retatining the same functionality. Analyse it.}
+We could split each array in half, compute the averages of the 4 sub-arrays then compare them. 
 
 
 
