@@ -1,5 +1,15 @@
 % Opg 3
-\section{}
+\section{Consider the following algorithm}
+\begin{minted}{python3}
+j := 1 
+while (j<=n) {
+	A[j] := 0
+	for i := j downto 1 {
+		A[j] := A[j]+i*i 
+	}
+	j := j+1
+}
+\end{minted}
 
 % Opg 3.a
 \subsection{}
