@@ -1,35 +1,18 @@
 \section{When constructing this problem set, Jakob ran into some very unfortunate problems.
-When he wanted to add a couple of more examples illustrating the power of inductive proofs, the
-proofs turned out to be a little bit too powerful. Specifically, Jakob was able to use mathematical
-induction to show
 1. that all swans have the same colour (presumably white, so that there are no black swans
-after all), and
-2. that all positive integers are in fact equal.
+after all), and 2. that all positive integers are in fact equal.
 Both of these claims are fairly disturbing from a mathematical point of view. Please help Jakob
 by pointing out clearly what goes wrong in his induction proofs below.}
 
 
 
-\subsection{Theorem. All swans have the same colour.
-Proof. We prove by induction over n that any set of n swans have the same colour.
-For the base case, if we have a set of n 1 swan, then this swan vacuously has the same
-colour as itself.
-For the induction step, assume as our induction hypothesis that all sets of n swans have
-the same colour, and consider a set of n + 1 swans. Fix some swan Sl in this set. If we
-remove Sl, then we have n swans left, and by the induction hypothesis they all have the
-same colour. Let C be this colour.
-Now consider another swan S2 in the set. If we remove S2 from our set of n + 1 swans
-instead of Sl, then we again have n swans left, and they all have the same colour by the
-induction hypothesis. Since Sl is one of the swans in this set, it must have the same
-colour C as all the others. Hence, all n + 1 swans have the same colour.
-It follows by the principle of mathematical induction that any set of n swans must always
-have the same colour.}
+\subsection{All swans have the same colour.}
 
-\subsection{Theorem. All positive integers are equal.
-Proof. By induction over n.
-For the base case, the positive integer 1 is equal to itself.
-For the induction step, assume as our induction hypothesis that n — 1 n. Adding 1 to
-both sides of this equality, we derive that n n + 1.
-It follows from this by the principle of mathematical induction that for all integers n the
-equality n n + 1 holds. But then by transitivity we obtain that all integers are equal,
-and the claim in the theorem statement has thus been established.}
+\subsection{All positive intergers are equal to each other}
+For the base case Jakob uses the fact that 1 is equal to itself, hence he uses the equation n=n. For the induction step, he uses a different induction hypothesis n= n-1. 
+This is counter intuitive. If we work backward and test the base case for the induction hypothesis, we see that the induction hypothesis fails in the base case scenario, which proves 
+that the theorem is wrong. 
+For $n_0 = 1$
+\begin{equation}
+	P(n_0) : n_0 = n_0 -1 = 1 \neq 1-1 
+\end{equation}

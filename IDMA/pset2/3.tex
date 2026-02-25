@@ -1,15 +1,37 @@
-\section{One annoying feature of merge sort is that it ignores long runs of already sorted elements.
-Your task in this problem is to analyse a modified algorithm by Jakob intended to fix this.
+\section{Your task in this problem is to analyse a modified algorithm by Jakob intended to fix this.
 The merge part of the algorithm would be essentially the same as before:}
 
 
 \subsection{Is the pseudocode algorithm above correct in that for any input array A it will be the case
 that mergerunssort (A) returns the same array but sorted in increasing order?}
+Yes, The algorithm initiate a while loop that ensures the splitting process is not started as long as A[i] < A[i+1], once the while-loop fails, the splitting process on the unsorted right-array
+begins and it keeps running until i= n (in the right array), when mergerunssort(R) terminates, the merge function initiates and begin to sort the elements by comparing the left and right arrays.
 
 
 \subsection{Regardless of whether the sorting algorithm is correct or not, does it always terminate
 (assuming that the input is an array of elements that can be compared with <=) and, if so,
 what is the worst-case time complexity?}
+Assuming that the array is not of infinite length, then yes, it should terminate after merging the splitted sub-arrays. 
+To find the worst case running time complexity, we have to analyse the cost of each function 
+The running time of an algorithm can be expressed using the function $T(n)$
+
+-The while-loop checks the elements i-times $O(i)$
+
+-splitting an array that has n elements takes n-times units  $O(n)$
+
+-The merge function sorts n elements in array of length n, that takes n-time units $O(n)$
+\begin{equation}
+	T(n) = O(i)+O(n)+ O(n-i)
+\end{equation}
+
+In the best case scenario where the array is already sorted and no split-merge is required, the algorithm runing time is proportional to the size of the array.  So time is a linear function. 
+In the worst case, the while loop terminates at $i=1$, and the array is split into L[1:1], and R[n-1] and R is then recursivly splitted until it is sorted. 
+The time it takes to split the array is $n + (n-1)+(n-2)....(n-n+1)$ This is an arithmitic function that can be written in the form $ \frac{n(n+1)}{2}= \frac{n^2+n}{2}$
+
+We can now write the time function in the following form \begin{equation}
+	T(n) = O(n^2) + O(n) + O(1) = O(n^2) 
+\end{equation}
+We dropped the lower order term, as they don't effect the running time for large n. 
 
 
 \subsection{Can you give any example of a family of input arrays of growing size for which Jakob's
@@ -17,3 +39,7 @@ merge runs sort algorithm will output a correctly sorted array and be asymptotic
 than the merge sort algorithm that we have covered in class? Can you give any example of
 a family of input arrays of growing size for which merge runs sort will be asymptotically
 slower than standard merge sort?}
+An input array that is already sorted (in a growing order) should run faster with Jakobs algorithm. 
+An input array that is sorted in a decreasing order should run faster with the typical mergesort that splits any array into half. 
+
+(I wish to get extra feedback on the T(n) function, I still feel weak when it comes to constructing those, so any feedback and explaination is appreciated )

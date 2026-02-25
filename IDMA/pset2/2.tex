@@ -5,6 +5,61 @@ rules for rewriting logic formulas that we have learned in class).}
 
 
 \subsection{$\neg ((p \to q) \vee r) \to ((\neg q \wedge \neg r) \wedge p)$}
+To solve this problem I made a truth table, then i realized that it would take alot of effort and time, therefore I decided to use logical thinking; 
+Tautology reuires that an expression is true for all the possible scenarios, so we technically only have to find one situation where the epxression translates to false to prove that it is not a tautology. 
+An implication of the form $A->B$ is false in one scenario only, A:T and B: F. take that $B: ((\neg q \land \neg r) \land p)$. B is false in the follwoing 4 scenarios.
+
+\begin{tabular}{c|c|c|c|c}
+$p$ & $q$ & $r$ & $\neg q \land \neg r$ & $(\neg q \land \neg r) \land p$\\
+\hline
+T & F & T & F & F\\
+T & T & F & F & F \\
+F & T & T & F &  F \\
+F & F & F & T &F \\
+T & T & T & F &F \\
+T & F & F & T &T
+\end{tabular}
+
+
+We can now work backward, by taking the values that return a false B, and plugging them in A. The disjunction in A, evaluates to true, if one of the statements is true, hence, we are 
+looking for the one statement in our subset of combinationsm where A : True, because it will evaluates to true when we apply the negation. 
+
+\begin{tabular}{c|c|c|c| c}
+$p$ & $q$ & $r$ & $ (p\implies q) $ & $\neg ((p\implies q) \vee r) $\\
+\hline
+T & T & T & T & F \\
+T & F & T & F & F \\
+T & T & F & T & F\\
+F & T & T & T & F\\
+F & F & F & T& F \\
+T & F & F & F & F \\
+\end{tabular}
+
+Since all the combinatation we used for B: false failed to break the argument, I know find the the values where A: True, since A is disjunction, there is only one scenario where that happens 
+(maybe I should have started there), a disjunction is false only when both elements are false. This happens when p:T , q: f and r: false. Plugging those values in the first truth table we get 
+that B: T, and with that we completly fail to break the logic of the expression. 
 
 
 \subsection{$((p \wedge q) \to r) \leftrightarrow ((q \vee r) \vee \neg p)$}
+Using the truth table, a biconditional statement $A \leftrightarrow B$ is only false in 2 scenarios, A:F  \(\land\)  B:T \(\vee\) A:T \(\land\) B:F. 
+Take that \begin{equation}
+A:((p \land q) \rightarrow r ),  B: ((q \vee r) \vee \neg p)
+\end{equation}
+
+\textbf{A: T, B:F}  : 
+I am going to list down the possible scenarios where A is true 
+
+\begin{tabular}{c| c |c|c|c}
+p & q &$p \land q$ & $r$ & A   \\
+\hline
+T&T &T & T & T \\
+T&F &F & F & T \\
+F&F &F & F &  T \\
+F&T &F & T &  T \\
+F&F &F & T &  T \\
+& &T & F  & F  (excluded)\\
+\end{tabular}
+
+Before going any further and using more time on the table, we can now go back to B and check for which scenario does it return false when A is true, the disjunction in B returns 
+false in one scenario, that is,p: T, q: F , r:F. We can see in our unfinished table(row2), that these values returun A:T, and since they return B:F . we can stop here and conclude that this 
+statement/expression is not a tautology.  (I still find this method to be time consuming, and somehow luck-based, I hope I can get more feedback on this, and perhaps more feedback on the wording as I still feel unsure about using terms like statements expressions etc.. )
